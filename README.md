@@ -25,8 +25,7 @@ Whether you prefer a sleek dark mode, a minimalist look, or a burst of color, th
    ~/.config/anytype/custom.css
    ```
 
-3. **Download this repository**
-
+3. **Download this repository** or just navigate to themes/ and choose one
    * Clone with Git:
 
      ```bash
