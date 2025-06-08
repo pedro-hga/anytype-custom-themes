@@ -1,0 +1,595 @@
+html,
+body,
+* {
+  font-family: "Mona Sans", sans-serif !important;
+  font-feature-settings:
+    "ss02" on,
+    "ss04" on,
+    "ss05" on,
+    "ss08" on;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+.textCode,
+.textCode * {
+  font-family: "Iosevka", "Monaspace Neon", monospace !important;
+  font-feature-settings:
+    "liga" on,
+    "calt" on;
+}
+.sidebar > #containerWidget > .body > * {
+  margin-right: 6px;
+}
+:root {
+  /* theme colors */
+  --theme-base: #faf4ed;
+  --theme-surface: #fffaf3;
+  --theme-overlay: #f2e9e1;
+  --theme-highlight-high: #cecacd;
+  --theme-highlight-low: #f4ede8;
+
+  --theme-text: #575279;
+  --theme-grey1: #9893a5;
+  --theme-grey2: #797593;
+
+  --theme-red: #b4637a;
+  --theme-orange: #d17a2e;
+  --theme-yellow: #ea9d34;
+  --theme-green: #5e8a66;
+  --theme-aqua: #56949f;
+  --theme-blue: #286983;
+  --theme-purple: #907aa9;
+  --theme-pink: #d7827e;
+  --theme-cyan: #3e9fa8;
+
+  --theme-grey1-30: rgba(152, 147, 165, 0.3);
+  --theme-grey2-30: rgba(121, 117, 147, 0.3);
+  --theme-cyan-30: rgba(62, 159, 168, 0.3);
+  --theme-green-30: rgba(94, 138, 102, 0.3);
+  --theme-orange-30: rgba(209, 122, 46, 0.3);
+  --theme-pink-30: rgba(215, 130, 126, 0.3);
+  --theme-purple-30: rgba(144, 122, 169, 0.3);
+  --theme-red-30: rgba(180, 99, 122, 0.3);
+  --theme-yellow-30: rgba(234, 157, 52, 0.3);
+  --theme-aqua-30: rgba(86, 148, 159, 0.3);
+  --theme-blue-30: rgba(40, 105, 131, 0.3);
+
+  --theme-red-hover: color-mix(in srgb, var(--theme-red) 80%, black);
+  --theme-orange-hover: color-mix(in srgb, var(--theme-orange) 80%, black);
+  --theme-yellow-hover: color-mix(in srgb, var(--theme-yellow) 80%, black);
+  --theme-green-hover: color-mix(in srgb, var(--theme-green) 80%, black);
+  --theme-aqua-hover: color-mix(in srgb, var(--theme-aqua) 80%, black);
+  --theme-blue-hover: color-mix(in srgb, var(--theme-blue) 80%, black);
+  --theme-purple-hover: color-mix(in srgb, var(--theme-purple) 80%, black);
+  --theme-pink-hover: color-mix(in srgb, var(--theme-pink) 80%, black);
+  --theme-cyan-hover: color-mix(in srgb, var(--theme-cyan) 80%, black);
+
+  /* anytype colors */
+  --comment: var(--theme-grey1);
+  --foreground: var(--theme-text);
+  --selection: var(--theme-highlight-low);
+  --cyan: var(--theme-cyan);
+  --green: var(--theme-green);
+  --orange: var(--theme-orange);
+  --pink: var(--theme-pink);
+  --purple: var(--theme-purple);
+  --red: var(--theme-red);
+  --yellow: var(--theme-yellow);
+  --orange: var(--theme-orange);
+  --blue: var(--theme-blue);
+  --ice: var(--theme-cyan);
+  --teal: var(--theme-aqua);
+  --lime: var(--theme-green);
+  --color-yellow: var(--theme-yellow);
+  --color-orange: var(--theme-orange);
+  --color-red: var(--theme-red);
+  --color-pink: var(--theme-pink);
+  --color-purple: var(--theme-purple);
+  --color-blue: var(--theme-blue);
+  --color-ice: var(--theme-cyan);
+  --color-teal: var(--theme-aqua);
+  --color-lime: var(--theme-green);
+
+  --color-text-primary: var(--theme-text);
+  --color-text-secondary: var(--theme-grey1);
+  --color-text-tertiary: var(--theme-grey2);
+  --color-text-inversion: var(--theme-base);
+
+  --color-shape-primary: var(--theme-surface);
+  --color-shape-secondary: var(--theme-overlay);
+  --color-shape-tertiary: var(--theme-highlight-low);
+  --color-shape-highlight-dark: rgba(211, 198, 170, 0.11);
+  --color-shape-highlight-medium: rgba(211, 198, 170, 0.05);
+  --color-shape-highlight-light: rgba(211, 198, 170, 0.03);
+
+  --color-control-accent: var(--theme-aqua);
+  --color-control-active: var(--theme-aqua-hover);
+  --color-control-inactive: var(--theme-grey1);
+  --color-control-bg: var(--theme-text);
+
+  --color-bg-primary: var(--theme-base);
+  --color-bg-secondary: var(--theme-surface);
+  --color-bg-loader: rgba(45, 53, 59, 0.7);
+
+  --color-bg-grey: var(--theme-grey1);
+  --color-bg-yellow: var(--theme-yellow);
+  --color-bg-orange: var(--theme-orange);
+  --color-bg-red: var(--theme-red);
+  --color-bg-pink: var(--theme-pink);
+  --color-bg-purple: var(--theme-purple);
+  --color-bg-blue: var(--theme-blue);
+  --color-bg-ice: var(--theme-cyan);
+  --color-bg-teal: var(--theme-aqua);
+  --color-bg-lime: var(--theme-green);
+
+  --color-tag-grey: var(--theme-text);
+  --color-tag-yellow: var(--theme-yellow);
+  --color-tag-orange: var(--theme-orange);
+  --color-tag-red: var(--theme-red);
+  --color-tag-pink: var(--theme-pink);
+  --color-tag-purple: var(--theme-purple);
+  --color-tag-blue: var(--theme-blue);
+  --color-tag-ice: var(--theme-cyan);
+  --color-tag-teal: var(--theme-aqua);
+  --color-tag-lime: var(--theme-green);
+
+  --color-bg-tag-grey: var(--theme-grey-30);
+  --color-bg-tag-yellow: var(--theme-yellow-30);
+  --color-bg-tag-orange: var(--theme-orange-30);
+  --color-bg-tag-red: var(--theme-red-30);
+  --color-bg-tag-pink: var(--theme-purple-30);
+  --color-bg-tag-purple: var(--theme-purple-30);
+  --color-bg-tag-blue: var(--theme-blue-30);
+  --color-bg-tag-ice: var(--theme-cyan-30);
+  --color-bg-tag-teal: var(--theme-aqua-30);
+  --color-bg-tag-lime: var(--theme-green-30);
+
+  --color-system-accent-125: var(--theme-blue);
+  --color-system-accent-50: var(--theme-red);
+  --color-system-accent-25: var(--theme-orange);
+  --color-system-selection: rgba(223, 105, 186, 0.3);
+
+  .widget,
+  .widgetSpace * {
+    background-color: var(--theme-surface) !important;
+    color: var(--theme-text) !important;
+  }
+
+  #vault,
+  #vault .side.top,
+  #vault .side.bottom {
+    background-color: var(--theme-overlay) !important;
+    color: var(--theme-text) !important;
+  }
+
+  .isMultiSelect.tagColor-grey {
+    background: var(--theme-grey1) !important;
+    color: var(--theme-base) !important;
+  }
+  .isMultiSelect.tagColor-yellow {
+    background: var(--theme-yellow) !important;
+    color: var(--theme-base) !important;
+  }
+  .isMultiSelect.tagColor-orange {
+    background: var(--theme-orange) !important;
+    color: var(--theme-base) !important;
+  }
+  .isMultiSelect.tagColor-red {
+    background: var(--theme-red) !important;
+    color: var(--theme-base) !important;
+  }
+  .isMultiSelect.tagColor-pink {
+    background: var(--theme-pink) !important;
+    color: var(--theme-base) !important;
+  }
+  .isMultiSelect.tagColor-purple {
+    background: var(--theme-purple) !important;
+    color: var(--theme-base) !important;
+  }
+  .isMultiSelect.tagColor-blue {
+    background: var(--theme-blue) !important;
+    color: var(--theme-base) !important;
+  }
+  .isMultiSelect.tagColor-ice {
+    background: var(--theme-cyan) !important;
+    color: var(--theme-base) !important;
+  }
+  .isMultiSelect.tagColor-teal {
+    background: var(--theme-aqua) !important;
+    color: var(--theme-base) !important;
+  }
+  .isMultiSelect.tagColor-lime {
+    background: var(--theme-green) !important;
+    color: var(--theme-base) !important;
+  }
+
+  .button.black:not(.disabled):hover {
+    /* the 'new' button in queries and collections */
+    background-color: var(--theme-aqua-hover);
+  }
+
+  /* gallery */
+  .swiper.swiper-initialized.swiper-horizontal {
+    background: var(--theme-surface) !important;
+  }
+  .label.banner {
+    background: var(--theme-overlay) !important;
+  }
+  .swiper-slide .item {
+    background-color: var(--color-control-accent) !important;
+    color: var(--theme-base);
+  }
+  .swiper-slide .item:hover {
+    background-color: var(--color-control-active) !important;
+    color: var(--theme-base);
+  }
+  .swiper-slide .item.active {
+    background-color: var(--color-control-active) !important;
+    color: var(--theme-base);
+  }
+  .swiper-button-prev::before {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 0%,
+      var(--color-control-active) 80%
+    ) !important;
+  }
+  .swiper-button-prev::after {
+    background-color: var(--color-control-accent) !important;
+  }
+  .swiper-button-prev::after:hover {
+    background-color: var(--color-control-active) !important;
+  }
+  .swiper-button-next::before {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 0%,
+      var(--color-control-active) 80%
+    ) !important;
+  }
+  .swiper-button-next::after {
+    background-color: var(--color-control-accent) !important;
+  }
+  .swiper-button-next::after:hover {
+    background-color: var(--color-control-active) !important;
+  }
+
+  /* text color */
+
+  .textColor-grey {
+    color: var(--theme-grey1) !important;
+  }
+  .textColor-cyan {
+    color: var(--theme-cyan) !important;
+  }
+
+  .textColor-green {
+    color: var(--theme-green) !important;
+  }
+
+  .textColor-orange {
+    color: var(--theme-orange) !important;
+  }
+
+  .textColor-pink {
+    color: var(--theme-pink) !important;
+  }
+
+  .textColor-purple {
+    color: var(--theme-purple) !important;
+  }
+
+  .textColor-red {
+    color: var(--theme-red) !important;
+  }
+
+  .textColor-yellow {
+    color: var(--theme-yellow) !important;
+  }
+
+  .textColor-blue {
+    color: var(--theme-blue) !important;
+  }
+
+  .textColor-ice {
+    color: var(--theme-cyan) !important;
+  }
+
+  .textColor-teal {
+    color: var(--theme-aqua) !important;
+  }
+
+  .textColor-lime {
+    color: var(--theme-green) !important;
+  }
+  .menus .menu .icon.color .inner.textColor-grey {
+    background: var(--theme-grey1) !important;
+  }
+}
+
+html.themeDark {
+  /* theme colors */
+  --theme-base: #191724;
+  --theme-surface: #1f1d2e;
+  --theme-overlay: #26233a;
+  --theme-highlight-high: #524f67;
+  --theme-highlight-low: #21202e;
+
+  --theme-text: #e0def4;
+  --theme-grey1: #6e6a86;
+  --theme-grey2: #908caa;
+
+  --theme-red: #eb6f92;
+  --theme-orange: #f09884;
+  --theme-yellow: #f6c177;
+  --theme-green: #62a785;
+  --theme-aqua: #9ccfd8;
+  --theme-blue: #31748f;
+  --theme-purple: #c4a7e7;
+  --theme-pink: #ebbcba;
+  --theme-cyan: #7ab7c0;
+
+  --theme-grey1-30: rgba(110, 106, 134, 0.3);
+  --theme-grey2-30: rgba(144, 140, 170, 0.3);
+  --theme-cyan-30: rgba(122, 183, 192, 0.3);
+  --theme-green-30: rgba(98, 167, 133, 0.3);
+  --theme-orange-30: rgba(240, 152, 132, 0.3);
+  --theme-pink-30: rgba(235, 188, 186, 0.3);
+  --theme-purple-30: rgba(196, 167, 231, 0.3);
+  --theme-red-30: rgba(235, 111, 146, 0.3);
+  --theme-yellow-30: rgba(246, 193, 119, 0.3);
+  --theme-aqua-30: rgba(156, 207, 216, 0.3);
+  --theme-blue-30: rgba(49, 116, 143, 0.3);
+
+  /* color variance for hovers */
+  --theme-grey1-hover: color-mix(in srgb, var(--theme-grey1) 80%, white);
+  --theme-grey2-hover: color-mix(in srgb, var(--theme-grey2) 80%, white);
+  --theme-red-hover: color-mix(in srgb, var(--theme-red) 80%, white);
+  --theme-orange-hover: color-mix(in srgb, var(--theme-orange) 80%, white);
+  --theme-yellow-hover: color-mix(in srgb, var(--theme-yellow) 80%, white);
+  --theme-green-hover: color-mix(in srgb, var(--theme-green) 80%, white);
+  --theme-aqua-hover: color-mix(in srgb, var(--theme-aqua) 80%, white);
+  --theme-blue-hover: color-mix(in srgb, var(--theme-blue) 80%, white);
+  --theme-purple-hover: color-mix(in srgb, var(--theme-purple) 80%, white);
+  --theme-pink-hover: color-mix(in srgb, var(--theme-pink) 80%, white);
+  --theme-cyan-hover: color-mix(in srgb, var(--theme-cyan) 80%, white);
+
+  /* anytype colors */
+  --comment: var(--theme-grey1);
+  --foreground: var(--theme-text);
+  --selection: var(--theme-highlight-low);
+  --cyan: var(--theme-cyan);
+  --green: var(--theme-green);
+  --orange: var(--theme-orange);
+  --pink: var(--theme-pink);
+  --purple: var(--theme-purple);
+  --red: var(--theme-red);
+  --yellow: var(--theme-yellow);
+  --orange: var(--theme-orange);
+  --blue: var(--theme-blue);
+  --ice: var(--theme-cyan);
+  --teal: var(--theme-aqua);
+  --lime: var(--theme-green);
+  --color-yellow: var(--theme-yellow);
+  --color-orange: var(--theme-orange);
+  --color-red: var(--theme-red);
+  --color-pink: var(--theme-pink);
+  --color-purple: var(--theme-purple);
+  --color-blue: var(--theme-blue);
+  --color-ice: var(--theme-cyan);
+  --color-teal: var(--theme-aqua);
+  --color-lime: var(--theme-green);
+
+  --color-text-primary: var(--theme-text);
+  --color-text-secondary: var(--theme-grey1);
+  --color-text-tertiary: var(--theme-grey2);
+  --color-text-inversion: var(--theme-base);
+
+  --color-shape-primary: var(--theme-surface);
+  --color-shape-secondary: var(--theme-overlay);
+  --color-shape-tertiary: var(--theme-highlight-low);
+  --color-shape-highlight-dark: rgba(211, 198, 170, 0.11);
+  --color-shape-highlight-medium: rgba(211, 198, 170, 0.05);
+  --color-shape-highlight-light: rgba(211, 198, 170, 0.03);
+
+  --color-control-accent: var(--theme-aqua);
+  --color-control-active: var(--theme-aqua-hover);
+  --color-control-inactive: var(--theme-grey1);
+  --color-control-bg: var(--theme-text);
+
+  --color-bg-primary: var(--theme-base);
+  --color-bg-secondary: var(--theme-surface);
+  --color-bg-loader: rgba(45, 53, 59, 0.7);
+
+  --color-bg-grey: var(--theme-grey1);
+  --color-bg-yellow: var(--theme-yellow);
+  --color-bg-orange: var(--theme-orange);
+  --color-bg-red: var(--theme-red);
+  --color-bg-pink: var(--theme-pink);
+  --color-bg-purple: var(--theme-purple);
+  --color-bg-blue: var(--theme-blue);
+  --color-bg-ice: var(--theme-cyan);
+  --color-bg-teal: var(--theme-aqua);
+  --color-bg-lime: var(--theme-green);
+
+  --color-tag-grey: var(--theme-text);
+  --color-tag-yellow: var(--theme-yellow);
+  --color-tag-orange: var(--theme-orange);
+  --color-tag-red: var(--theme-red);
+  --color-tag-pink: var(--theme-pink);
+  --color-tag-purple: var(--theme-purple);
+  --color-tag-blue: var(--theme-blue);
+  --color-tag-ice: var(--theme-cyan);
+  --color-tag-teal: var(--theme-aqua);
+  --color-tag-lime: var(--theme-green);
+
+  --color-bg-tag-grey: var(--theme-grey-30);
+  --color-bg-tag-yellow: var(--theme-yellow-30);
+  --color-bg-tag-orange: var(--theme-orange-30);
+  --color-bg-tag-red: var(--theme-red-30);
+  --color-bg-tag-pink: var(--theme-purple-30);
+  --color-bg-tag-purple: var(--theme-purple-30);
+  --color-bg-tag-blue: var(--theme-blue-30);
+  --color-bg-tag-ice: var(--theme-cyan-30);
+  --color-bg-tag-teal: var(--theme-aqua-30);
+  --color-bg-tag-lime: var(--theme-green-30);
+
+  --color-system-accent-125: var(--theme-blue);
+  --color-system-accent-50: var(--theme-red);
+  --color-system-accent-25: var(--theme-orange);
+  --color-system-selection: rgba(214, 153, 182, 0.3);
+
+  .widget,
+  .widgetSpace * {
+    background-color: var(--theme-overlay) !important;
+    color: var(--theme-text) !important;
+  }
+
+  #vault,
+  #vault .side.top,
+  #vault .side.bottom {
+    background-color: var(--color-shape-secondary) !important;
+  }
+
+  /* this overrides the tags text color and background */
+  /* to use anytypes's original scheme with a light colored background with colored text, comment this lines out */
+  .isMultiSelect.tagColor-grey {
+    background: var(--theme-grey2) !important;
+    color: var(--theme-base) !important;
+  }
+  .isMultiSelect.tagColor-yellow {
+    background: var(--theme-yellow) !important;
+    color: var(--theme-base) !important;
+  }
+  .isMultiSelect.tagColor-orange {
+    background: var(--theme-orange) !important;
+    color: var(--theme-base) !important;
+  }
+  .isMultiSelect.tagColor-red {
+    background: var(--theme-red) !important;
+    color: var(--theme-base) !important;
+  }
+  .isMultiSelect.tagColor-pink {
+    background: var(--theme-pink) !important;
+    color: var(--theme-base) !important;
+  }
+  .isMultiSelect.tagColor-purple {
+    background: var(--theme-purple) !important;
+    color: var(--theme-base) !important;
+  }
+  .isMultiSelect.tagColor-blue {
+    background: var(--theme-blue) !important;
+    color: var(--theme-base) !important;
+  }
+  .isMultiSelect.tagColor-ice {
+    background: var(--theme-cyan) !important;
+    color: var(--theme-base) !important;
+  }
+  .isMultiSelect.tagColor-teal {
+    background: var(--theme-aqua) !important;
+    color: var(--theme-base) !important;
+  }
+  .isMultiSelect.tagColor-lime {
+    background: var(--theme-green) !important;
+    color: var(--theme-base) !important;
+  }
+
+  /* gallery */
+  .swiper.swiper-initialized.swiper-horizontal {
+    background: var(--theme-surface) !important;
+  }
+  .label.banner {
+    background: var(--theme-overlay) !important;
+  }
+  .swiper-slide .item {
+    background-color: var(--color-control-accent) !important;
+    color: var(--theme-base);
+  }
+  .swiper-slide .item:hover {
+    background-color: var(--color-control-active) !important;
+    color: var(--theme-base);
+  }
+  .swiper-slide .item.active {
+    background-color: var(--color-control-active) !important;
+    color: var(--theme-base);
+  }
+  .swiper-button-prev::before {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 0%,
+      var(--color-control-active) 80%
+    ) !important;
+  }
+  .swiper-button-prev::after {
+    background-color: var(--color-control-accent) !important;
+  }
+  .swiper-button-prev::after:hover {
+    background-color: var(--color-control-active) !important;
+  }
+  .swiper-button-next::before {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 0%,
+      var(--color-control-active) 80%
+    ) !important;
+  }
+  .swiper-button-next::after {
+    background-color: var(--color-control-accent) !important;
+  }
+  .swiper-button-next::after:hover {
+    background-color: var(--color-control-active) !important;
+  }
+
+  /* text color */
+
+  .textColor-grey {
+    color: var(--theme-grey1) !important;
+  }
+  .textColor-cyan {
+    color: var(--theme-cyan) !important;
+  }
+
+  .textColor-green {
+    color: var(--theme-green) !important;
+  }
+
+  .textColor-orange {
+    color: var(--theme-orange) !important;
+  }
+
+  .textColor-pink {
+    color: var(--theme-pink) !important;
+  }
+
+  .textColor-purple {
+    color: var(--theme-purple) !important;
+  }
+
+  .textColor-red {
+    color: var(--theme-red) !important;
+  }
+
+  .textColor-yellow {
+    color: var(--theme-yellow) !important;
+  }
+
+  .textColor-blue {
+    color: var(--theme-blue) !important;
+  }
+
+  .textColor-ice {
+    color: var(--theme-cyan) !important;
+  }
+
+  .textColor-teal {
+    color: var(--theme-aqua) !important;
+  }
+
+  .textColor-lime {
+    color: var(--theme-green) !important;
+  }
+  .menus .menu .icon.color .inner.textColor-grey {
+    background: var(--theme-grey1) !important;
+  }
+}

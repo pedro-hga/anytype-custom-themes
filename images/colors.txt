@@ -1,0 +1,10 @@
+everforest-light
+--theme-red: #f85552;
+--theme-orange: #f57d26;
+--theme-yellow: #dfa000;
+--theme-green: #8da101;
+--theme-aqua: #35a77c;
+--theme-blue: #3a94c5;
+--theme-purple: #df69ba;
+--theme-pink: #e85a9a;
+--theme-cyan: #3caeb9;
