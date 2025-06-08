@@ -104,9 +104,9 @@ body,
 ```
 
 Here are the fonts that are used in this project (as shown in the screenshots):
-- [Mona Sans][https://github.com/github/mona-sans]
-- [Mona Space][https://github.com/githubnext/monaspace]
-- [Iosevka][https://github.com/be5invis/Iosevka]
+- [Mona Sans](https://github.com/github/mona-sans)
+- [Mona Space](https://github.com/githubnext/monaspace)
+- [Iosevka](https://github.com/be5invis/Iosevka)
 
 ### Accents
 
