@@ -41,7 +41,7 @@ Whether you prefer a sleek dark mode, a minimalist look, or a burst of color, th
 
 ## How to Customize
 
-All color values are grouped near the top of the CSS file. To build a new theme, modify these values in both `:root {}` and `html.themedark {}`:
+All color values are grouped near the top of each selector. To build a new theme, modify these values in both `:root {}` and `html.themedark {}`:
 
 ```css
   --theme-base: #eff1f5;
@@ -85,7 +85,7 @@ To change the fonts used in the theme, modify the following:
 html,
 body,
 * {
-  font-family: "mona sans", sans-serif !important;
+  font-family: "Mona Sans", sans-serif !important;
   font-feature-settings:
     "ss02" on,
     "ss04" on,
@@ -97,16 +97,21 @@ body,
 
 .textcode,
 .textcode * {
-  font-family: "iosevka", "monaspace neon", monospace !important;
+  font-family: "Iosevka", "Monaspace Neon", monospace !important;
   font-feature-settings:
     "liga" on,
     "calt" on;
 }
 ```
 
+Here are the fonts that are used in this project (as shown in the screenshots):
+- [Mona Sans][https://github.com/github/mona-sans]
+- [Mona Space][https://github.com/githubnext/monaspace]
+- [Iosevka][https://github.com/be5invis/Iosevka]
+
 ### Accents
 
-To change the accent color used in buttons and active elements:
+To change the accent color used, just change the var() these lines in both `:root` and/or `html.themeDark`:
 
 ```css
   --color-control-accent: var(--theme-aqua);
@@ -134,8 +139,11 @@ If you enjoy these themes and want to support further development:
 
 ## Images
 
-I enjoy color coding all my spaces and objects (as seen in the screenshots) instead of using emojis, and for that I use a python snippet to create SVGs and convert them to .png, to be uploaded to anytype.
-There are a couple of images and the python code included in `images/`, but if you want to create more, just take the colors you want and change them in `colors.txt`.
-The first line is always the theme name you want to use, the rest is in this format: `--theme-red: #f85552;`.
-Place one color per line. The code ignores the "--theme-" and use the color name in the exit file name.
-To execute `colors.py` run `pip install cairosvg` in your environment and then `python colors.py`
+- I enjoy color coding all my spaces and objects (as seen in the screenshots) instead of using emojis, and for that I use a python snippet to create SVGs and convert them to .png, to be uploaded to anytype.
+- There are a couple of images and the python code included in `images/`, but if you want to create more, just take the colors you want and change them in `colors.txt`.
+- The first line is always the theme name you want to use, the rest is in this format: `--theme-red: #f85552;`. Place one color per line. The code ignores the "--theme-" and use the color name in the exit file name.
+- To execute `colors.py` run `pip install cairosvg` in your environment and then `python colors.py`
+
+---
+
+Licensed under the [Unlicense](https://unlicense.org/).
