@@ -12,7 +12,8 @@ body,
 }
 
 .textCode,
-.textCode * {
+.textCode *,
+markupcode {
   font-family: "Iosevka", "Monaspace Neon", monospace !important;
   font-feature-settings:
     "liga" on,
